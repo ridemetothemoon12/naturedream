@@ -85,6 +85,9 @@ a {
             @include header_size(250px, $header_L);
             align-items: center;
             .m_btn {
+                position: relative;
+            }
+            .btn_wrap {
                 @include header_flex(flex, wrap);
                 width: $header_L;
                 padding: 22.5px 0;
@@ -100,7 +103,7 @@ a {
                         margin-bottom: 0;
                     }
                 }
-                &:hover {
+                &.on {
                     background-color: $main_color;
                     .line {
                         background-color: white;
@@ -162,6 +165,28 @@ a {
                 @extend .login;
                 &::after {
                     content: "매장안내";
+                }
+            }
+        }
+    }
+    .drop_menu {
+        display: none;
+        position: absolute;
+        width: 332px;
+        height: 552px;
+        background-color: white;
+        top: 70px;
+        border: 2px solid $main_color;
+        .left {
+            @include header_flex(flex, wrap);
+            justify-content: space-evenly;
+            width: 169px;
+            height: 100%;
+            border-right: 3px solid $main_color;
+            ul {
+                margin-top: 10px;
+                li {
+                    padding: 6px 0;
                 }
             }
         }
