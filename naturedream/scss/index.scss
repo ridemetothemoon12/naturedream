@@ -1079,15 +1079,6 @@ h3 {
         p {
             font-size: 13px;
         }
-        &::after {
-            position: absolute;
-            right: 5px;
-            bottom: 3px;
-            content: "더보기";
-            padding: 1px 1px;
-            border: 1px solid white;
-            border-radius: 3px;
-        }
     }
 }
 
@@ -1116,35 +1107,39 @@ h3 {
         justify-content: space-between;
     }
     .membership {
-        width: 660px;
-        height: 250px;
+        width: 640px;
+        height: 200px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         .item {
             display: flex;
-            width: 317px;
-            height: 103px;
+            width: 310px;
+            height: 90px;
             background-color: white;
             box-shadow: $shadow;
             font-size: 14px;
             align-items: center;
             .txt {
-                padding: 5px;
+                padding: 10px;
             }
             h3 {
-                font-size: 16px;
+                font-size: 18px;
                 width: fit-content;
                 display: inline-block;
             }
         }
     }
     .qna {
+        margin-top: 30px;
+        @include header_flex(flex, wrap);
+        justify-content: space-between;
         width: 440px;
+        height: fit-content;
         p {
             width: fit-content;
             font-size: 16px;
-            margin: 0 0 30px 0;
+            margin: 0 0 20px 0;
             &:nth-child(2)::after {
                 content: "(점심시간 : 12시 ~ 13시)";
                 @include header_flex(flex, wrap);
@@ -1152,12 +1147,15 @@ h3 {
             }
         }
         span {
+            font-size: 32px;
+            font-weight: bold;
             color: $main_color;
         }
     }
     .q_btn {
         color: white;
         @include header_flex(flex, wrap);
+        flex-direction: column;
         .item {
             width: 138px;
             height: 30px;
@@ -1167,7 +1165,7 @@ h3 {
             border-radius: $bdrs;
             box-shadow: $shadow;
             &:nth-child(2) {
-                margin: 0 10px;
+                margin: 30px 0;
             }
         }
     }
